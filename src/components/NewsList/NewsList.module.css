@@ -1,0 +1,10 @@
+.list {
+  max-width: 1100px;
+  margin: 10px auto;
+  clear: both;
+}
+
+.card {
+  float: left;
+  margin: 10px;
+}

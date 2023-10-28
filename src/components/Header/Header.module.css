@@ -1,0 +1,84 @@
+.header {
+  background-color: rgb(46, 46, 46);
+  color: #fff;
+  font-size: 16px;
+  padding: 20px 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  clear: both;
+}
+
+.menu {
+  clear: both;
+  width: 100%;
+}
+
+.mainMenu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.mainMenu a:hover {
+  color: #a7a7a7;
+}
+
+.mainMenu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  float: left;
+}
+
+.mainMenu li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.userContainer {
+  position: relative;
+  cursor: pointer;
+  float: right;
+  top: -10px;
+  margin-right: 20px;
+}
+
+.userImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.userMenu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.userMenu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.userMenu ul li {
+  padding: 0;
+  margin: 0;
+}
+
+.userMenu a {
+  display: block;
+  padding: 7px 14px;
+  min-width: 150px;
+  color: #000;
+  text-decoration: none;
+}
+
+.userMenu a:hover {
+  background-color: #f1f1f1;
+}
