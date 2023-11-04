@@ -11,7 +11,7 @@ const Search: React.FC<SearchProps> = ({ items }) => {
   const [filtredItems, setFiltredItems] = useState<Item[]>([])
 
   const handleSearch = (text: string): void => {
-    const filtred = items.filter((item) => {
+    const filtred: Item[] = items.filter((item) => {
       return item.text.toLowerCase().includes(text.toLowerCase())
     }).sort((a, b) => b.rating - a.rating)
 

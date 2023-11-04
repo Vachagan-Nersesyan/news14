@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from './Header.module.css'
 import Search from '../Search'
 import { SearchProps } from '../Search/Search.interface'
+import { Link } from 'react-router-dom'
 
 const Header: React.FC<SearchProps> = ({ items }) => {
   const [isUserMenuOpen, setUserMenuOpen] = useState<boolean>(false)
@@ -15,13 +16,13 @@ const Header: React.FC<SearchProps> = ({ items }) => {
       <nav className={styles.menu}>
         <ul className={styles.mainMenu}>
           <li>
-            <a href='#'>Home</a>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <a href='#'>About</a>
+            <Link to='/about'>About</Link>
           </li>
           <li>
-            <a href='#'>Contact</a>
+            <Link to='/contact'>Contact</Link>
           </li>
         </ul>
 

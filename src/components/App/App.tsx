@@ -1,6 +1,11 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import AboutPage from '../../pages/AboutPage'
+import ContactPage from '../../pages/ContactPage'
+import MainPage from '../../pages/MainPage'
+
 import Header from '../Header'
-import NewsList from '../NewsList'
 
 const App: React.FC = () => {
   const news = [
@@ -54,10 +59,16 @@ const App: React.FC = () => {
   ]
 
   return (
-    <div>
-      <Header items={searchAutocomplite} />
-      <NewsList news={news} />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Header items={searchAutocomplite} />
+        <Routes>
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/contact' element={<ContactPage />} />
+          <Route path='/' element={<MainPage news={news} />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 
