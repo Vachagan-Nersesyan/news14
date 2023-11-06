@@ -64,7 +64,7 @@ const App: React.FC = () => {
 
   return (
     <BrowserRouter>
-      <div className='app'>
+      <div className='app dark'>
         <Header items={searchAutocomplite} />
         <Suspense fallback={<Loading />}>
           <Routes>
