@@ -1,12 +1,11 @@
-import React, { Suspense, lazy, useState } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import '../../styles/index.scss'
 
 import Header from '../Header'
 import Loading from '../Loading'
-
-import { FaSun } from "react-icons/fa6";
+import useTheme from '../../theme/useTheme'
 
 const MainPage = lazy(() => import('../../pages/MainPage'))
 const AboutPage = lazy(() => import('../../pages/AboutPage'))
@@ -14,18 +13,8 @@ const ContactPage = lazy(() => import('../../pages/ContactPage'))
 const NewsPage = lazy(() => import('../../pages/NewsPage'))
 
 
-
-export enum Theme {
-  LIGHT = 'light',
-  DARK = 'dark',
-}
-
 const App: React.FC = () => {
-  const [theme, setTheme] = useState<Theme>(Theme.LIGHT)
-
-  const toggleTheme = () => {
-    setTheme(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK)
-  }
+  const { theme } = useTheme();
 
   const news = [
     {
@@ -81,8 +70,6 @@ const App: React.FC = () => {
     <BrowserRouter>
       <div className={`app ${theme}`}>
         <Header items={searchAutocomplite} />
-      
-        <button onClick={toggleTheme}><FaSun /></button>
 
         <Suspense fallback={<Loading />}>
           <Routes>
