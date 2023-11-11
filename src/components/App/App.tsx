@@ -6,6 +6,7 @@ import 'styles/index.scss'
 import Header from 'components/Header'
 import Loading from 'components/Loading'
 import useTheme from 'theme/useTheme'
+import Modal from 'components/Modal'
 
 const MainPage = lazy(() => import('pages/MainPage'))
 const AboutPage = lazy(() => import('pages/AboutPage'))
@@ -79,6 +80,11 @@ const App: React.FC = () => {
             <Route path='/' element={<MainPage news={news} />} />
           </Routes>
         </Suspense>
+
+        <Modal>
+          <h1>Login</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fugiat voluptatibus ipsum deserunt vel fugit iure. Quidem ex similique quam atque voluptates labore voluptate quae dolorem, beatae, veritatis mollitia! Adipisci.</p>
+        </Modal>
       </div>
     </BrowserRouter>
   )

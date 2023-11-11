@@ -1,0 +1,19 @@
+.modal {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  min-height: 200px;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-30%, -50%);
+}
+
+.modal h1 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
