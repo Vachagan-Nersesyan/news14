@@ -8,10 +8,10 @@ interface ModalProps {
 
 const Modal: FC<ModalProps> = ({ children }) => {
   const [isOpen, setIsOpen] = useState<Boolean>(true)
-  const modalRef = useRef<any>(null)
+  const modalRef = useRef<HTMLDivElement>(null)
 
-  const closeModal = (event: any) => {
-    if (modalRef.current && !modalRef.current.contains(event.target)) {
+  const closeModal = (event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
       setIsOpen(false)
     }
   }
