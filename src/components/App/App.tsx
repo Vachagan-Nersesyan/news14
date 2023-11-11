@@ -1,16 +1,16 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import '../../styles/index.scss'
+import 'styles/index.scss'
 
-import Header from '../Header'
-import Loading from '../Loading'
-import useTheme from '../../theme/useTheme'
+import Header from 'components/Header'
+import Loading from 'components/Loading'
+import useTheme from 'theme/useTheme'
 
-const MainPage = lazy(() => import('../../pages/MainPage'))
-const AboutPage = lazy(() => import('../../pages/AboutPage'))
-const ContactPage = lazy(() => import('../../pages/ContactPage'))
-const NewsPage = lazy(() => import('../../pages/NewsPage'))
+const MainPage = lazy(() => import('pages/MainPage'))
+const AboutPage = lazy(() => import('pages/AboutPage'))
+const ContactPage = lazy(() => import('pages/ContactPage'))
+const NewsPage = lazy(() => import('pages/NewsPage'))
 
 
 const App: React.FC = () => {

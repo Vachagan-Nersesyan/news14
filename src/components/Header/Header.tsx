@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import styles from './Header.module.css'
-import Search from '../Search'
-import { SearchProps } from '../Search/Search.interface'
+import Search from 'components/Search'
+import { SearchProps } from 'components/Search/Search.interface'
 import { Link } from 'react-router-dom'
 import { FaSun } from "react-icons/fa6";
-import useTheme from '../../theme/useTheme'
+import useTheme from 'theme/useTheme'
 
 const Header: React.FC<SearchProps> = ({ items }) => {
   const { toggleTheme } = useTheme();
