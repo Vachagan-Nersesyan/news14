@@ -38,12 +38,19 @@ const Header: React.FC<HeaderProps> = ({ items, user, handleSingOut }) => {
           {
             user ? (
               <>
-                <img
-                  src="https://avatars.githubusercontent.com/u/98681?v=4"
-                  alt="user name"
-                  className={styles.userImage}
-                  onClick={toggleUserMenu}
-                />
+              {
+                user.photoURL ? (
+                  <div onClick={toggleUserMenu}>
+                    <p>{user.displayName}</p>
+                    <img
+                      src={user.photoURL}
+                      alt="user name"
+                      className={styles.userImage}
+                    />
+                  </div>
+                ) : <div onClick={toggleUserMenu}>{user.displayName}</div>
+              }
+                
 
                 {
                   isUserMenuOpen ? (
@@ -56,7 +63,7 @@ const Header: React.FC<HeaderProps> = ({ items, user, handleSingOut }) => {
                           <a href='#'>Settings</a>
                         </li>
                         <li>
-                          <a href='#'>Sign Out</a>
+                          <button onClick={handleSingOut}>Sign Out</button>
                         </li>
                       </ul>
                     </div>
