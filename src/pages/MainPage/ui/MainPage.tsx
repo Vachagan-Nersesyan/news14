@@ -1,6 +1,6 @@
 import React from 'react'
-import NewsList from '../components/NewsList'
-import { NewsListProps } from '../components/NewsList/NewsList.interface'
+import NewsList from '../../../components/NewsList'
+import { NewsListProps } from '../../../components/NewsList/NewsList.interface'
 
 const MainPage: React.FC<NewsListProps> = ({ news }) => {
 

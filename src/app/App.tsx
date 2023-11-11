@@ -2,13 +2,13 @@ import React, { Suspense, lazy, useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { onAuthStateChanged, signOut, User } from 'firebase/auth'
 
-import 'styles/index.scss'
+import 'app/styles/index.scss'
 
 import Header from 'components/Header'
 import Loading from 'components/Loading'
-import useTheme from 'theme/useTheme'
+import { useTheme } from './providers/ThemeProvider'
 import Modal from 'components/Modal'
-import { auth } from '../../firebase'
+import { auth } from '../firebase'
 
 const MainPage = lazy(() => import('pages/MainPage'))
 const AboutPage = lazy(() => import('pages/AboutPage'))

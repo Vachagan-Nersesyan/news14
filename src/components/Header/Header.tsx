@@ -4,7 +4,7 @@ import Search from 'components/Search'
 import { HeaderProps } from 'components/Search/Search.interface'
 import { Link } from 'react-router-dom'
 import { FaSun } from "react-icons/fa6";
-import useTheme from 'theme/useTheme'
+import { useTheme } from 'app/providers/ThemeProvider'
 import SignIn from 'components/SignIn'
 
 const Header: React.FC<HeaderProps> = ({ items, user, handleSingOut }) => {

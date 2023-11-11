@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { NewsListProps } from '../components/NewsList/NewsList.interface';
+import { NewsListProps } from '../../../components/NewsList/NewsList.interface';
 
 const NewsPage: React.FC<NewsListProps> = ({ news }) => {
   const { id } = useParams();
