@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { NewsListProps } from '../../../components/NewsList/NewsList.interface';
 import { NewsCardPropsCommentsType } from 'components/NewsCard/NewsCard.interface';
 import styles from '../styles/NewsStyles.module.css'
+import Comments from 'components/Comments';
 
 const NewsPage: React.FC<NewsListProps> = ({ news }) => {
   debugger
@@ -47,12 +48,12 @@ const NewsPage: React.FC<NewsListProps> = ({ news }) => {
             comments?.map((val) => {
               return (
                 <div>
-                  <CommentItem info={val} />
+                  <Comments info={val} />
                   <div className={styles.comment_part_in_comment}>
                     {
                       val.replay?.map((val1) => {
                         return (
-                          <CommentItem info={val1} />
+                          <Comments info={val1} />
                         )
                       })
                     }
@@ -65,34 +66,16 @@ const NewsPage: React.FC<NewsListProps> = ({ news }) => {
             })
           }
         </div>
+        <div>
+          <input type="text" />
+          <button>Add reply</button>
+        </div>
       </div>
 
     </div>
   )
 }
 
-const CommentItem: React.FC<OwnProps> = ({ info }) => {
 
-  return (
-    <div className={styles.comment_content_ovrl}>
-      <div className={styles.comment_content_in_item_1}>
-        <img src={info.author.image} />
-      </div>
-      <div className={styles.comment_content_in_item_2}>
-        <div className={styles.comment_content_in_item_2_1_item}>
-          <span>{info.author.name}</span>
-          <span>{info.date}</span>
-        </div>
-        <div className={styles.comment_content_in_item_2_2_item}>
-          {info.text}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-type OwnProps = {
-  info: NewsCardPropsCommentsType
-}
 
 export default NewsPage
