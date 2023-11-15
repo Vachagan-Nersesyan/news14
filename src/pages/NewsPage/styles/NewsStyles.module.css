@@ -1,0 +1,39 @@
+.comment_overlay {
+    padding: 2em;
+}
+
+.comment_title {
+    color: black;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid grey;
+}
+
+.comment_part {
+    padding-top: 1em;
+}
+
+.comment_content_ovrl {
+    padding: 1em;
+    background-color: grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: .5em;
+}
+
+.comment_content_in_item_1 {
+    width: 200px;
+}
+
+.comment_content_in_item_1 img {
+    width: 20%;
+}
+
+.comment_btn {
+    margin-bottom: 1.5em;
+}
+
+.comment_part_in_comment {
+    padding-left: 5em;
+}
