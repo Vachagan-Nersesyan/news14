@@ -6,7 +6,7 @@ import styles from '../styles/NewsStyles.module.css'
 import Comments from 'components/Comments';
 
 const NewsPage: React.FC<NewsListProps> = ({ news }) => {
-  debugger
+
   const { id } = useParams();
   const articleId = Number(id)
 

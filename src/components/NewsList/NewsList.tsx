@@ -5,6 +5,10 @@ import { NewsListProps } from './NewsList.interface'
 import { NewsCardProps } from '../NewsCard/NewsCard.interface'
 
 const NewsList: React.FC<NewsListProps> = ({ news }) => {
+
+  
+
+
   return (
     <div className={styles.list}>
 
